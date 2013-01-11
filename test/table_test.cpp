@@ -1,12 +1,6 @@
-#define BOOST_TEST_ALTERNATIVE_INIT_API
-#include <boost/test/included/unit_test.hpp>
+#define BOOST_TEST_MODULE table_test
 #include <boost/test/unit_test.hpp>
 #include <table.hpp>
-
-bool init_unit_test()
-{
-  return true;
-}
 
 struct times_two
 {

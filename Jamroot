@@ -12,7 +12,6 @@ import testing ;
 alias table
   : # sources
   : # requirements
-    <include>include
   : # default-build
   : # usage-requirements
     <include>include
@@ -22,6 +21,6 @@ unit-test table_test
   : # sources
     test/table_test.cpp
     table
-    /site-config//boost
+    /boost/test//boost_unit_test_framework
   : # requirements
   ;
