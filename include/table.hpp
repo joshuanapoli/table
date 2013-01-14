@@ -15,4 +15,24 @@ struct table : detail::seq_table<T, typename detail::gen_seq<N>::type>
   {}
 };
 
+// Tuple interface to class template array.
+namespace std
+{
+  /// tuple_size
+  template<typename _Tp> 
+    class tuple_size;
+
+  template<typename _Tp, std::size_t _Nm>
+    struct tuple_size<table<_Tp, _Nm>>
+    : public integral_constant<std::size_t, _Nm> { };
+
+  /// tuple_element
+  template<std::size_t _Int, typename _Tp>
+    class tuple_element;
+
+  template<std::size_t _Int, typename _Tp, std::size_t _Nm>
+    struct tuple_element<_Int, table<_Tp, _Nm> >
+    { typedef _Tp type; };
+}
+
 #endif

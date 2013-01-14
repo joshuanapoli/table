@@ -19,6 +19,9 @@ BOOST_AUTO_TEST_CASE( table_should_generate_values )
     );
 }
 
-constexpr table<std::size_t, 2> test_table{times_two()};
+typedef table<std::size_t, 2> test_table_type;
+constexpr test_table_type test_table{times_two()};
 static_assert( 0 == test_table[0], "test_table[0] should be equal 0 (2*0)" );
 static_assert( 2 == test_table[1], "test_table[1] should be equal 2 (2*1)" );
+
+static_assert( 2 == std::tuple_size<test_table_type>::value, "test table should have tuple interface" );
