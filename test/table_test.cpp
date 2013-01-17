@@ -1,3 +1,14 @@
+//-----------------------------------------------------------------------------
+// Examples and tests of the constant expression table library.
+//-----------------------------------------------------------------------------
+//
+// Copyright (c) 2013
+// Joshua Napoli <jnapoli@alum.mit.edu>
+//
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+
 #define BOOST_TEST_MODULE table_test
 #include <boost/test/unit_test.hpp>
 #include <table.hpp>

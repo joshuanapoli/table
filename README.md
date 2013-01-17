@@ -44,3 +44,14 @@ the initialized array values. A template argument pack is constructed with the
 index values <0, 1, 2, ..., N-1>. To avoid the compiler's maximum template
 instantiation depth, a divide-and-conquer approach is taken to cosntructing the
 index argument pack.
+
+
+Copyright
+=========
+
+This library is available under the Boost Software License.
+
+Copyright (C) 2013 Joshua Napoli
+Distributed under the Boost Software License, Version 1.0. 
+(See Accompanying File LICENSE_1_0.Txt or copy at
+http://www.boost.org/LICENSE_1_0.txt)
