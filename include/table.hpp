@@ -20,6 +20,10 @@
 template<typename T, std::size_t N>
 struct table : detail::seq_table<T, typename detail::gen_seq<N>::type>
 {
+  constexpr table()
+    : detail::seq_table<T, typename detail::gen_seq<N>::type>()
+  {}
+
   template<typename F>
   constexpr table( F f )
     : detail::seq_table<T, typename detail::gen_seq<N>::type>( f )

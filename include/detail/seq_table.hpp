@@ -22,6 +22,10 @@ namespace detail
   struct seq_table<T, seq<Index...>> : std::array<T, sizeof...(Index)>
   {
   public:
+    constexpr seq_table()
+      : std::array<T, sizeof...(Index)>{{T(Index)...}}
+    {}
+
     template<typename F>
     constexpr seq_table( F f )
       : std::array<T, sizeof...(Index)>{{f(Index)...}}
