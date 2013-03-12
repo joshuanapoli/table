@@ -31,5 +31,19 @@ unit-test table_test
     test/table_test.cpp
     table
     /boost/test//boost_unit_test_framework
-  : # requirements
   ;
+
+unit-test array_cat_test
+  : # sources
+    test/array_cat_test.cpp
+    table
+    /boost/test//boost_unit_test_framework
+  ;
+
+unit-test array_cat_element_test
+  : # sources
+    test/array_cat_element_test.cpp
+    table
+    /boost/test//boost_unit_test_framework
+  ;
+  
